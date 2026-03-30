@@ -1,0 +1,78 @@
+name: Daily Quote
+
+on:
+  schedule:
+    - cron: "0 2 * * *" # runs daily at 2 AM UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  quote:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate Quote SVG
+        run: |
+          mkdir -p dist
+          python3 << 'PYTHON_SCRIPT'
+          import random
+          import textwrap
+          import html as html_mod
+
+          quotes = [
+              ("Talk is cheap. Show me the code.", "Linus Torvalds"),
+              ("First, solve the problem. Then, write the code.", "John Johnson"),
+              ("Code is like humor. When you have to explain it, it's bad.", "Cory House"),
+              ("Simplicity is the soul of efficiency.", "Austin Freeman"),
+              ("Make it work, make it right, make it fast.", "Kent Beck"),
+              ("Any fool can write code that a computer can understand. Good programmers write code that humans can understand.", "Martin Fowler"),
+              ("The best error message is the one that never shows up.", "Thomas Fuchs"),
+              ("Fix the cause, not the symptom.", "Steve Maguire"),
+              ("Deleted code is debugged code.", "Jeff Sickel"),
+              ("Premature optimization is the root of all evil.", "Donald Knuth"),
+              ("Programs must be written for people to read, and only incidentally for machines to execute.", "Harold Abelson"),
+              ("One person's constant is another person's variable.", "Alan Perlis"),
+              ("It's not a bug — it's an undocumented feature.", "Anonymous"),
+              ("The most disastrous thing that you can ever learn is your first programming language.", "Alan Kay"),
+              ("Measuring programming progress by lines of code is like measuring aircraft building progress by weight.", "Bill Gates"),
+              ("Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.", "John Woods"),
+          ]
+
+          quote, author = random.choice(quotes)
+          lines = textwrap.wrap(quote, width=45)
+          line_height = 22
+          quote_block_height = len(lines) * line_height
+          svg_height = max(120, quote_block_height + 80)
+
+          lines_svg = ""
+          for i, line in enumerate(lines):
+              y = 55 + i * line_height
+              lines_svg += f'  <text x="55" y="{y}" font-size="15" fill="#c9d1d9" font-family="Arial,Helvetica,sans-serif">{html_mod.escape(line)}</text>\n'
+
+          author_y = 55 + len(lines) * line_height + 20
+
+          svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="600" height="{svg_height}">
+            <defs>
+              <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#0d1117"/>
+                <stop offset="100%" style="stop-color:#161b22"/>
+              </linearGradient>
+            </defs>
+            <rect width="600" height="{svg_height}" rx="10" fill="url(#bg)" stroke="#30363d" stroke-width="1"/>
+            <text x="20" y="50" font-size="50" fill="#58a6ff" font-family="Georgia,serif">&ldquo;</text>
+          {lines_svg}  <text x="55" y="{author_y}" font-size="13" fill="#58a6ff" font-family="Arial,Helvetica,sans-serif">&mdash; {html_mod.escape(author)}</text>
+          </svg>'''
+
+          with open('dist/quote.svg', 'w') as f:
+              f.write(svg)
+          PYTHON_SCRIPT
+
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          keep_files: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

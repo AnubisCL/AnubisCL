@@ -5,6 +5,14 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=6C63FF&center=true&vCenter=true&random=false&width=550&height=70&lines=Backend+Engineer;Open+Source+Enthusiast;Lifelong+Learner" alt="Typing SVG" />
 </a>
 
+<br/>
+
+<!-- Badges -->
+<a href="https://anubiscl.github.io/"><img src="https://img.shields.io/badge/Blog-anubiscl.github.io-FF4088?style=flat-square&logo=hexo&logoColor=white" /></a>
+<img src="https://img.shields.io/badge/Focus-Backend_Engineering-6C63FF?style=flat-square" />
+<img src="https://img.shields.io/badge/Learning-Rust-DEA584?style=flat-square&logo=rust&logoColor=white" />
+<img src="https://img.shields.io/badge/Editor-IntelliJ_IDEA-000?style=flat-square&logo=intellijidea&logoColor=white" />
+
 </div>
 
 ---
@@ -55,6 +63,14 @@ A passionate backend developer focused on **Java/Spring** ecosystem, with experi
 
 ---
 
+### 💭 Quote of the Day
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/AnubisCL/AnubisCL/output/quote.svg" alt="Daily Quote" />
+</div>
+
+---
+
 ### 🐍 My Contribution Snake
 
 <picture>
@@ -62,6 +78,27 @@ A passionate backend developer focused on **Java/Spring** ecosystem, with experi
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AnubisCL/AnubisCL/output/github-snake.svg" />
   <img alt="github-snake" src="https://raw.githubusercontent.com/AnubisCL/AnubisCL/output/github-snake.svg" />
 </picture>
+
+---
+
+<details>
+<summary>💬 More About Me</summary>
+
+```text
+anubis@github:~$ cat about.me
+-----------------------------------
+OS:        macOS / Linux
+Editor:    IntelliJ IDEA
+Language:  Java > Python > Rust > Vue
+Cloud:     Docker + Kubernetes
+Database:  MySQL / Redis / MongoDB
+Messaging: RabbitMQ / Elasticsearch
+Hobby:     Open Source / Tech Blog
+-----------------------------------
+anubis@github:~$ _
+```
+
+</details>
 
 ---
 
