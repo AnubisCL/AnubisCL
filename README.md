@@ -66,7 +66,7 @@ A passionate backend developer focused on **Java/Spring** ecosystem, with experi
 ### 💭 Quote of the Day
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AnubisCL/AnubisCL/output/quote.svg" alt="Daily Quote" />
+  <img src="https://raw.githubusercontent.com/AnubisCL/AnubisCL/output/quote.svg?v=2" alt="Daily Quote" />
 </div>
 
 ---
@@ -74,9 +74,9 @@ A passionate backend developer focused on **Java/Spring** ecosystem, with experi
 ### 🐍 My Contribution Snake
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AnubisCL/AnubisCL/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AnubisCL/AnubisCL/output/github-snake.svg" />
-  <img alt="github-snake" src="https://raw.githubusercontent.com/AnubisCL/AnubisCL/output/github-snake.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AnubisCL/AnubisCL/output/github-snake-dark.svg?v=2" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AnubisCL/AnubisCL/output/github-snake.svg?v=2" />
+  <img alt="github-snake" src="https://raw.githubusercontent.com/AnubisCL/AnubisCL/output/github-snake.svg?v=2" />
 </picture>
 
 ---
