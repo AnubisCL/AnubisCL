@@ -1,20 +1,27 @@
-name: Daily Quote
+name: Generate Profile Assets
 
 on:
   schedule:
-    - cron: "0 2 * * *" # runs daily at 2 AM UTC
+    - cron: "0 0 * * *" # runs daily at midnight UTC
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  quote:
+  build:
     runs-on: ubuntu-latest
     steps:
+      - name: Generate Snake Game from GitHub Contribution Graph
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: AnubisCL
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+
       - name: Generate Quote SVG
         run: |
-          mkdir -p dist
           python3 << 'PYTHON_SCRIPT'
           import random
           import textwrap
@@ -33,7 +40,6 @@ jobs:
               ("Premature optimization is the root of all evil.", "Donald Knuth"),
               ("Programs must be written for people to read, and only incidentally for machines to execute.", "Harold Abelson"),
               ("One person's constant is another person's variable.", "Alan Perlis"),
-              ("It's not a bug — it's an undocumented feature.", "Anonymous"),
               ("The most disastrous thing that you can ever learn is your first programming language.", "Alan Kay"),
               ("Measuring programming progress by lines of code is like measuring aircraft building progress by weight.", "Bill Gates"),
               ("Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.", "John Woods"),
@@ -73,6 +79,5 @@ jobs:
         with:
           target_branch: output
           build_dir: dist
-          keep_files: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
