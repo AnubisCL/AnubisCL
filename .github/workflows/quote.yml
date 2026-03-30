@@ -60,8 +60,8 @@ jobs:
               </linearGradient>
             </defs>
             <rect width="600" height="{svg_height}" rx="10" fill="url(#bg)" stroke="#30363d" stroke-width="1"/>
-            <text x="20" y="50" font-size="50" fill="#58a6ff" font-family="Georgia,serif">&ldquo;</text>
-          {lines_svg}  <text x="55" y="{author_y}" font-size="13" fill="#58a6ff" font-family="Arial,Helvetica,sans-serif">&mdash; {html_mod.escape(author)}</text>
+            <text x="20" y="50" font-size="50" fill="#58a6ff" font-family="Georgia,serif">\u201c</text>
+          {lines_svg}  <text x="55" y="{author_y}" font-size="13" fill="#58a6ff" font-family="Arial,Helvetica,sans-serif">\u2014 {html_mod.escape(author)}</text>
           </svg>'''
 
           with open('dist/quote.svg', 'w') as f:
