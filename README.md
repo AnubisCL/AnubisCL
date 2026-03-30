@@ -50,18 +50,7 @@ A passionate backend developer focused on **Java/Spring** ecosystem, with experi
 ### <img src='https://media1.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif?cid=ecf05e47x2g034i9pzwtzzsd3xgg2w9nr94t4tflbbgo3008&rid=giphy.gif' width='25' /> My GitHub Stats
 
 <div align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=anubiscl&show_icons=true&count_private=true&include_all_commits=true&theme=cobalt&locale=cn" />
-  <img height="170" src="https://streak-stats.demolab.com?user=AnubisCL&theme=cobalt&locale=zh_Hans" />
-</div>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=anubiscl&theme=cobalt&locale=cn&layout=compact&hide=EJS,javascript,html,css,less" />
-</div>
-
-### 🏆 GitHub Trophies
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=AnubisCL&theme=onestar&column=7&margin-w=5&margin-h=5" />
+  <img src="https://streak-stats.demolab.com?user=AnubisCL&theme=cobalt&locale=zh_Hans" />
 </div>
 
 ---
